@@ -3,6 +3,7 @@ import AOS from "aos"; // AOS for animations on scroll
 import "aos/dist/aos.css";
 import items from "../Data";
 import Modal from "./Modal";
+import Loader from "./Loader";
 
 const Dashboard = () => {
   useEffect(() => {
@@ -64,6 +65,7 @@ const Dashboard = () => {
   return (
     <>
       {/* Navbar */}
+      
       <nav className="bg-transparent py-4 px-6 top-0 w-full z-10 shadow-xl ">
         <div className="flex justify-between items-center">
           <h1 className="text-2xl font-semibold hover:text-gray-600 cursor-pointer uppercase">
