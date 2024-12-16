@@ -5,12 +5,12 @@ html{
   scroll-behavior: smooth;
 }
 body {
-  background-image: url("../src/Shiny.svg"); /* Path to your image */
-  background-size: cover; /* Make the background cover the entire element */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Ensure the image doesn't repeat */
-  background-attachment: fixed; /* Fix the background image */
-  height: 100vh; /* Ensure the background covers the full height of the viewport */
+  background-image: url("../src/Shiny.svg"); 
+  background-size: cover;
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-attachment: fixed; 
+  height: 100vh; 
 }
 
 #brutalist-card {
@@ -69,7 +69,6 @@ button:hover {
   }
 }
 
-/* From Uiverse.io by SouravBandyopadhyay */ 
 .hourglassBackground {
   position: relative;
   background-color: rgb(71, 60, 60);

@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import AOS from "aos"; // AOS for animations on scroll
+import AOS from "aos";
 import "aos/dist/aos.css";
 const Modal = ({ item, onClose }) => {
   useEffect(() => {
@@ -7,7 +7,7 @@ const Modal = ({ item, onClose }) => {
       duration: 1000,
       once: true,
     });
-    AOS.refresh(); // Refresh AOS to detect new DOM elements
+    AOS.refresh(); 
   }, []);
 
   if (!item) return null;

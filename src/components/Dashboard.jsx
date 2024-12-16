@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
-import AOS from "aos"; // AOS for animations on scroll
+import AOS from "aos"; 
 import "aos/dist/aos.css";
 import items from "../Data";
 import Modal from "./Modal";
-import Loader from "./Loader";
 
 const Dashboard = () => {
   useEffect(() => {
@@ -11,7 +10,7 @@ const Dashboard = () => {
       duration: 1000,
       once: true,
     });
-    AOS.refresh(); // Refresh AOS to detect new DOM elements
+    AOS.refresh(); 
   }, []);
 
   const [selectedItem, setSelectedItem] = useState(null);
@@ -19,14 +18,12 @@ const Dashboard = () => {
   const [engagementFilter, setEngagementFilter] = useState([0, 1000]);
   const [sortOption, setSortOption] = useState("engagement-asc");
 
-  // Helper functions for engagement and reach calculations
   const calculateEngagement = (item) =>
     item.likes + item.shares + item.comments;
 
   const calculateReach = (item) =>
     Math.round((item.followers * calculateEngagement(item)) / 100);
 
-  // Event handlers
   const handleCategoryChange = (e) => setCategoryFilter(e.target.value);
 
   const handleSortChange = (e) => setSortOption(e.target.value);
@@ -36,7 +33,6 @@ const Dashboard = () => {
     setEngagementFilter([min, max]);
   };
 
-  // Filter and sort logic
   const filteredItems = items
     .filter((item) => {
       const engagement = calculateEngagement(item);
@@ -65,7 +61,6 @@ const Dashboard = () => {
   return (
     <>
       {/* Navbar */}
-      
       <nav className="bg-transparent py-4 px-6 top-0 w-full z-10 shadow-xl ">
         <div className="flex justify-between items-center">
           <h1 className="text-2xl font-semibold hover:text-gray-600 cursor-pointer uppercase">
